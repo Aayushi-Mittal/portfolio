@@ -1,10 +1,36 @@
-@import url(fontawesome-all.min.css);
+/*@import url(fontawesome-all.min.css);*/
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 /*
+	CSS for Typing Effect
+*/
+
+.inner p span.typed-text {
+	font-weight: bold;
+	color: #dd7732;
+  }
+  .inner p span.cursor {
+	display: inline-block;
+	background-color: white;
+	/* margin-left: 0.1rem; */
+	width: 3px;
+	animation: blink 1s infinite;
+  }
+  .inner p span.cursor.typing {
+	animation: none;
+  }
+  
+  @keyframes blink {
+	0%  { background-color: gray; }
+	49% { background-color: gray; }
+	50% { background-color: transparent; }
+	99% { background-color: transparent; }
+	100%  { background-color:  gray; }
+  }
+
+/*
 	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	html5up.net
 */
 
 html, body, div, span, applet, object,
@@ -586,6 +612,18 @@ input, select, textarea {
 		padding: 1.5em;
 	}
 
+	.section{
+		border: solid 1px white;
+		border-radius: 5px;
+		padding:1.5em;
+		width:100%;
+		margin:20px 0px;
+	}
+	.section:hover{
+		background:black;
+		box-shadow: 1px 1px 8px 2px white;
+	}
+
 		.box > :last-child,
 		.box > :last-child > :last-child,
 		.box > :last-child > :last-child > :last-child {
@@ -642,6 +680,14 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+	}
+	.project-img{
+		display:inline-block;
+		position: relative;
+		width:100%;
+	}
+	.project-img img{
+		width:100%;
 	}
 
 		.image:before {
@@ -702,6 +748,11 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
+			}
+			.image.pic img{
+				width:50%;
+				border-radius:50%;
+				margin:0.5rem auto;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1140,9 +1191,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1305,6 +1359,7 @@ input, select, textarea {
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
+			background:rgba(0, 0, 0, 0.6);
 		}
 
 			#header .content .inner {
@@ -1543,7 +1598,7 @@ input, select, textarea {
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			background-color: rgba(0, 0, 0, 0.75);
 			border-radius: 4px;
 			opacity: 0;
 		}
